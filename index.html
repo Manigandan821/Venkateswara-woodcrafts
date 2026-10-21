@@ -1,65 +1,1134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Venkateswara Woodcraft — custom carpentry, kitchen woodwork, furniture repairs and maintenance in Varthur, Bengaluru.">
-<link rel="icon" type="image/jpeg" href="assets/venkateswara-logo.jpeg">
-<link rel="apple-touch-icon" href="assets/venkateswara-logo.jpeg">
-<title>Venkateswara Woodcraft | Crafted for Your Home</title>
-<style>
-:root{--ink:#231a14;--muted:#776b61;--paper:#fffdf9;--cream:#f5efe6;--brown:#57351f;--wood:#9a5e2d;--amber:#d49b52;--line:#e8ddd0;--green:#283b2d}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}.topbar{background:var(--brown);color:#fff3e4;font-size:12px;padding:8px 0}.topbar .wrap{display:flex;justify-content:space-between;gap:12px}.topbar a{font-weight:800}header{position:sticky;top:0;z-index:20;background:#fffdf9ed;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;min-width:0}.brand img{width:54px;height:54px;object-fit:cover;border-radius:50%;border:1px solid #d9b98e}.brand strong{display:block;font-family:Georgia,serif;font-size:19px;letter-spacing:-.4px;line-height:1.15}.brand small{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:700}.navlinks{display:flex;align-items:center;gap:25px;font-size:13px;font-weight:750}.navlinks a:hover{color:var(--wood)}.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 19px;border-radius:999px;background:var(--brown);color:white;font-size:13px;font-weight:800;border:1px solid var(--brown);transition:.2s;cursor:pointer}.button:hover{background:var(--wood);border-color:var(--wood);transform:translateY(-2px)}.button.light{background:transparent;color:var(--brown);border-color:#cbb8a5}.button.light:hover{background:white}.menu{display:none;background:transparent;border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:20px}
-.hero{background:linear-gradient(120deg,#f8f1e7,#fdfaf5 58%,#efe0cd);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:55px;align-items:center;padding:66px 0 74px;min-height:610px}.eyebrow{display:flex;align-items:center;gap:9px;color:var(--wood);font-size:11px;text-transform:uppercase;letter-spacing:2.1px;font-weight:900}.eyebrow:before{content:"";height:2px;width:25px;background:var(--amber)}h1,h2,h3,p{margin-top:0}h1{font:500 clamp(45px,5.3vw,72px)/1.03 Georgia,serif;letter-spacing:-2.8px;margin:20px 0}.hero h1 em{font-weight:400;color:var(--wood)}.lead{max-width:510px;font-size:17px;color:var(--muted);margin-bottom:28px}.actions{display:flex;gap:12px;flex-wrap:wrap}.rating{display:flex;align-items:center;gap:12px;margin-top:28px;font-size:13px;color:var(--muted)}.stars{color:#b77b28;letter-spacing:2px}.rating strong{color:var(--ink)}.hero-art{position:relative;padding:0 15px 20px 0}.hero-art img{width:100%;height:450px;object-fit:cover;border-radius:190px 190px 22px 22px;box-shadow:0 25px 65px #51351f26}.hero-art:after{content:"";position:absolute;inset:0 15px 20px 0;border:1px solid #d3a76c;border-radius:190px 190px 22px 22px;pointer-events:none}.floating-card{position:absolute;left:-25px;bottom:0;background:white;border:1px solid var(--line);border-radius:16px;padding:17px 20px;box-shadow:0 12px 35px #3b28141c;max-width:245px}.floating-card b{display:block;font:500 21px Georgia,serif}.floating-card span{font-size:12px;color:var(--muted)}.round-tag{position:absolute;right:-2px;top:26px;background:var(--amber);color:var(--brown);width:95px;height:95px;border-radius:50%;display:grid;place-items:center;text-align:center;font-size:10px;font-weight:900;line-height:1.4;letter-spacing:1px;transform:rotate(8deg);border:5px solid #f8f1e7}
-.benefits{background:white;border-bottom:1px solid var(--line)}.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);padding:23px 0}.benefit{display:flex;align-items:center;justify-content:center;gap:12px;border-right:1px solid var(--line)}.benefit:last-child{border:0}.benefit .ico{font-size:24px}.benefit b{display:block;font-size:13px}.benefit span{display:block;font-size:11px;color:var(--muted)}
-section{padding:88px 0}.section-head{max-width:660px;margin-bottom:36px}.section-head h2,.about h2,.contact h2{font:500 clamp(35px,4vw,51px)/1.1 Georgia,serif;letter-spacing:-1.5px;margin:13px 0}.section-head p{color:var(--muted);max-width:610px}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service{border:1px solid var(--line);border-radius:17px;padding:27px;background:#fff;transition:.22s}.service:hover{transform:translateY(-4px);box-shadow:0 16px 35px #3b28140d;border-color:#d7b98e}.service .ico{width:48px;height:48px;display:grid;place-items:center;background:var(--cream);border-radius:14px;font-size:22px;margin-bottom:19px}.service h3{font:500 23px Georgia,serif;margin-bottom:9px}.service p{font-size:13px;color:var(--muted);margin:0}
-.about{background:var(--green);color:white}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}.about-photo{position:relative}.about-photo img{width:100%;height:435px;object-fit:cover;border-radius:18px}.about-photo span{position:absolute;left:18px;bottom:18px;background:#fff;color:var(--ink);padding:12px 16px;border-radius:11px;font-size:12px;font-weight:800}.about .eyebrow{color:#e7bf83}.about p{color:#d5ddd6;font-size:14px}.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:25px 0 28px}.checks span{font-size:13px}.checks b{color:#e7bf83;margin-right:8px}
-.gallery{background:var(--cream)}.gallery-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:220px 220px;gap:14px}.gallery-item{position:relative;overflow:hidden;border-radius:15px;background:#ddd}.gallery-item:first-child{grid-row:span 2}.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.gallery-item:hover img{transform:scale(1.05)}.gallery-item:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#17110dc9)}.gallery-item span{position:absolute;bottom:15px;left:16px;z-index:1;color:#fff;font-size:13px;font-weight:800}
-.review{text-align:center;background:white}.review-inner{max-width:790px;margin:auto}.review blockquote{font:500 clamp(25px,3vw,37px)/1.3 Georgia,serif;margin:20px 0}.review p{font-size:13px;color:var(--muted)}.review .button{margin-top:10px}
-.contact{background:#f8f3eb}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px}.contact-intro{color:var(--muted);max-width:440px}.contact-row{display:flex;gap:13px;margin:21px 0;align-items:flex-start}.contact-row .ico{width:43px;height:43px;border-radius:13px;background:white;display:grid;place-items:center;font-size:19px;flex-shrink:0}.contact-row b{display:block;font-size:13px}.contact-row span,.contact-row a{font-size:13px;color:var(--muted)}.contact-row a:hover{color:var(--wood)}.quote-panel{padding:30px;background:white;border:1px solid var(--line);border-radius:20px;align-self:center}.quote-panel h3{font:500 28px Georgia,serif;margin-bottom:7px}.quote-panel p{font-size:13px;color:var(--muted)}.quote-actions{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.map-link{display:block;border:1px solid var(--line);border-radius:12px;padding:14px;font-size:13px;font-weight:800}.map-link small{display:block;color:var(--muted);font-weight:400;margin-top:4px}
-footer{background:#201b16;color:#f8eee2;padding:26px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:12px}.footer-row .brand small{color:#cbb9a7}.footer-row .brand img{width:42px;height:42px}.footer-row>span{color:#cbb9a7}
-@media(max-width:880px){.navlinks{display:none;position:absolute;top:78px;left:0;right:0;background:var(--paper);padding:22px;width:100%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:17px}.navlinks.open{display:flex}.menu{display:block}.nav>.button{display:none}.hero-grid{grid-template-columns:1fr;gap:35px;padding:50px 0}.hero-copy{max-width:680px}.hero-art{max-width:600px;width:100%;margin:0 auto}.hero-art img{height:420px}.about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.about-photo img{height:360px}.services{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-rows:200px 200px}.benefit{justify-content:flex-start;padding:0 12px}.benefit b{font-size:12px}}
-@media(max-width:560px){.wrap{width:calc(100% - 32px)}.topbar .wrap{justify-content:center;text-align:center}.topbar .wrap span:first-child{display:none}.nav{height:70px}.navlinks{top:70px}.brand img{width:44px;height:44px}.brand strong{font-size:16px}.brand small{font-size:9px;letter-spacing:1.4px}.hero-grid{padding:40px 0 45px;gap:28px}h1{font-size:48px;letter-spacing:-1.8px}.lead{font-size:15px}.actions{display:grid;grid-template-columns:1fr}.actions .button{width:100%}.hero-art{padding-right:6px}.hero-art img{height:330px;border-radius:150px 150px 18px 18px}.hero-art:after{right:6px;border-radius:150px 150px 18px 18px}.floating-card{left:0;padding:13px 15px;max-width:210px}.floating-card b{font-size:18px}.round-tag{width:76px;height:76px;font-size:8px;right:0;top:15px;border-width:3px}.benefit-grid{grid-template-columns:1fr;padding:8px 0}.benefit{padding:12px 2px;border-right:0;border-bottom:1px solid var(--line)}.benefit:last-child{border-bottom:0}section{padding:62px 0}.section-head{margin-bottom:27px}.services{grid-template-columns:1fr;gap:12px}.service{padding:23px}.checks{grid-template-columns:1fr}.about-photo img{height:300px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:190px 150px 150px;gap:9px}.gallery-item:first-child{grid-row:auto;grid-column:span 2}.gallery-item span{left:11px;bottom:10px;font-size:11px}.quote-panel{padding:22px}.quote-actions{display:grid;grid-template-columns:1fr}.quote-actions .button{width:100%}.footer-row{flex-direction:column;align-items:flex-start}.footer-row>span{line-height:1.5}}
-</style></head>
-<body>
-<div class="topbar"><div class="wrap"><span>Carpentry & woodwork in Varthur, Bengaluru</span><span>Call our main number: <a href="tel:+917204604892">72046 04892</a></span></div></div>
-<header><div class="wrap nav">
-<a class="brand" href="#home"><img src="assets/venkateswara-logo.jpeg" alt="Venkateswara Woodcraft logo"><span><strong>Venkateswara Woodcraft</strong><small>Crafted with care</small></span></a>
-<nav class="navlinks" id="navlinks"><a href="#services">Services</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></nav>
-<a class="button" href="tel:+917204604892">☎ Call now</a><button class="menu" id="menu" aria-label="Open menu" aria-expanded="false">☰</button>
-</div></header>
-<main>
-<section class="hero" id="home"><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow">Local carpentry · Varthur</div><h1>Beautiful woodwork.<br><em>Built around you.</em></h1><p class="lead">From kitchen woodwork and custom carpentry to everyday repairs, we help make your home more useful, comfortable and beautifully finished.</p><div class="actions"><a class="button" href="tel:+917204604892">☎ &nbsp;72046 04892</a><a class="button light" href="#contact">Discuss your project ↗</a></div><div class="rating"><span class="stars">★★★★★</span><span><strong>5.0 Google rating</strong><br>Based on 2 reviews</span></div></div>
-<div class="hero-art"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Elegant home interior with warm wood finishes"><div class="floating-card"><b>Craftsmanship for home</b><span>Repairs, maintenance and custom woodwork</span></div><div class="round-tag">MADE WITH<br>CARE<br>✦ VARTHUR ✦</div></div></div></section>
-<div class="benefits"><div class="wrap benefit-grid"><div class="benefit"><div class="ico">⌂</div><div><b>Home woodwork</b><span>Made to suit your space</span></div></div><div class="benefit"><div class="ico">✧</div><div><b>Careful workmanship</b><span>Practical, thoughtful solutions</span></div></div><div class="benefit"><div class="ico">📍</div><div><b>Local to Varthur</b><span>Bengaluru and nearby areas</span></div></div></div></div>
-<section id="services"><div class="wrap"><div class="section-head"><div class="eyebrow">Our services</div><h2>Practical solutions.<br>Beautiful details.</h2><p>Tell us what you need. We can discuss the work, timing and estimate before arranging your carpentry service.</p></div><div class="services">
-<article class="service"><div class="ico">🪚</div><h3>Custom carpentry</h3><p>Made-to-measure woodwork planned around your space and requirements.</p></article>
-<article class="service"><div class="ico">🍽️</div><h3>Kitchen woodwork</h3><p>Kitchen woodwork, adjustments and repairs for a more practical everyday space.</p></article>
-<article class="service"><div class="ico">🪑</div><h3>Furniture repairs</h3><p>Repair and maintenance for household furniture and wood fittings.</p></article>
-<article class="service"><div class="ico">🚪</div><h3>Doors & fittings</h3><p>Help with common door, hinge, alignment and fitting issues.</p></article>
-<article class="service"><div class="ico">🛠️</div><h3>Repairs & maintenance</h3><p>Small fixes and upkeep to keep your woodwork working well.</p></article>
-<article class="service"><div class="ico">✎</div><h3>Custom requirements</h3><p>Have a particular idea? Call and talk through your project with us.</p></article>
-</div></div></section>
-<section class="about" id="about"><div class="wrap about-grid"><div class="about-photo"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=85" alt="Bright interior with carefully finished wood and furniture"><span>Venkateswara Woodcraft · Bengaluru</span></div><div><div class="eyebrow">About our work</div><h2>Good work begins with understanding your needs.</h2><p>Every home is different. We believe in understanding the requirement, discussing practical options and focusing on the details that make woodwork useful and long-lasting.</p><p>From a repair to a new kitchen or custom carpentry project, contact us to discuss what you have in mind.</p><div class="checks"><span><b>✓</b>Friendly project discussion</span><span><b>✓</b>Home repairs and maintenance</span><span><b>✓</b>Custom requirements welcome</span><span><b>✓</b>Local Varthur service</span></div><a class="button" href="tel:+917204604892">Call the main number</a></div></div></section>
-<section class="gallery" id="gallery"><div class="wrap"><div class="section-head"><div class="eyebrow">Gallery & inspiration</div><h2>Ideas for your next project.</h2><p>Explore a few interior and woodwork inspirations. These sample photos illustrate styles and are not claimed as completed customer projects.</p></div><div class="gallery-grid">
-<div class="gallery-item"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Warm contemporary living room"><span>Warm, welcoming interiors</span></div>
-<div class="gallery-item"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Modern kitchen interior"><span>Kitchen inspiration</span></div>
-<div class="gallery-item"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85" alt="Modern interior details"><span>Modern finishes</span></div>
-<div class="gallery-item"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Home design inspiration"><span>Natural wood tones</span></div>
-<div class="gallery-item"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Tasteful home furniture"><span>Furniture and space</span></div>
-</div></div></section>
-<section class="review" id="reviews"><div class="wrap review-inner"><div class="stars">★★★★★</div><blockquote>“Trusted local carpentry, with a 5.0 Google rating.”</blockquote><p>Venkateswara Woodcraft's Google Business Profile currently shows a 5.0 rating from 2 reviews.</p><a class="button light" href="https://www.google.com/maps/search/?api=1&query=Venkateswara%20Woodcraft%20Varthur%20Bengaluru" target="_blank" rel="noopener">View business on Google Maps ↗</a></div></section>
-<section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">Get in touch</div><h2>Tell us what you’d like to build or fix.</h2><p class="contact-intro">Call either number to discuss your carpentry needs, service availability and a quote.</p>
-<div class="contact-row"><div class="ico">☎</div><div><b>Main contact number</b><a href="tel:+917204604892">72046 04892</a></div></div>
-<div class="contact-row"><div class="ico">☎</div><div><b>Secondary contact number</b><a href="tel:+919677452011">96774 52011</a></div></div>
-<div class="contact-row"><div class="ico">⌖</div><div><b>Business address</b><span>Site no. 15/2, Mahalaxmi Layout, Badavane,<br>Varthur, Chikkanekkundi, Bengaluru,<br>Karnataka 560087</span></div></div>
-<div class="contact-row"><div class="ico">◷</div><div><b>Hours</b><span>Google Business Profile lists 24-hour availability. Please call to confirm before visiting.</span></div></div>
-</div><div class="quote-panel"><h3>Ready to discuss your project?</h3><p>No online form or database required. Call directly or start a WhatsApp conversation with a pre-filled message.</p><div class="quote-actions"><a class="button" href="tel:+917204604892">☎ Call 72046 04892</a><a class="button light" href="https://wa.me/917204604892?text=Hello%20Venkateswara%20Woodcraft%2C%20I%20would%20like%20to%20discuss%20a%20carpentry%20requirement." target="_blank" rel="noopener">WhatsApp ↗</a></div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Site%20no%2015%2F2%2C%20Mahalaxmi%20Layout%2C%20Varthur%2C%20Chikkanekkundi%2C%20Bengaluru%20560087" target="_blank" rel="noopener">📍 Get directions on Google Maps<small>Varthur, Chikkanekkundi, Bengaluru 560087</small></a></div></div></section>
-</main>
-<footer><div class="wrap footer-row"><a class="brand" href="#home"><img src="assets/venkateswara-logo.jpeg" alt=""><span><strong>Venkateswara Woodcraft</strong><small>Crafted with care</small></span></a><span>© <span id="year"></span> Venkateswara Woodcraft · Bengaluru</span><a href="#home">Back to top ↑</a></div></footer>
-<script>
-const menu=document.getElementById('menu'),nav=document.getElementById('navlinks');
-menu.addEventListener('click',()=>{let open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'✕':'☰'});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
-document.getElementById('year').textContent=new Date().getFullYear();
-</script>
-</body></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Venkateswara Woodcraft — custom carpentry, kitchen woodwork, furniture repairs and maintenance in Varthur, Bengaluru."
+    />
+    <link rel="icon" type="image/jpeg" href="assets/venkateswara-logo.jpeg" />
+    <link rel="apple-touch-icon" href="assets/venkateswara-logo.jpeg" />
+    <title>Venkateswara Woodcraft | Crafted for Your Home</title>
+    <style>
+      :root {
+        --ink: #231a14;
+        --muted: #776b61;
+        --paper: #fffdf9;
+        --cream: #f5efe6;
+        --brown: #57351f;
+        --wood: #9a5e2d;
+        --amber: #d49b52;
+        --line: #e8ddd0;
+        --green: #283b2d;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 82px;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, Arial, sans-serif;
+        line-height: 1.6;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      .wrap {
+        width: min(1160px, calc(100% - 44px));
+        margin: auto;
+      }
+      .topbar {
+        background: var(--brown);
+        color: #fff3e4;
+        font-size: 12px;
+        padding: 8px 0;
+      }
+      .topbar .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .topbar a {
+        font-weight: 800;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: #fffdf9ed;
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav {
+        height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+      }
+      .brand img {
+        width: 54px;
+        height: 54px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid #d9b98e;
+      }
+      .brand strong {
+        display: block;
+        font-family: Georgia, serif;
+        font-size: 19px;
+        letter-spacing: -0.4px;
+        line-height: 1.15;
+      }
+      .brand small {
+        font-size: 10px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 700;
+      }
+      .navlinks {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        font-size: 13px;
+        font-weight: 750;
+      }
+      .navlinks a:hover {
+        color: var(--wood);
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 13px 19px;
+        border-radius: 999px;
+        background: var(--brown);
+        color: white;
+        font-size: 13px;
+        font-weight: 800;
+        border: 1px solid var(--brown);
+        transition: 0.2s;
+        cursor: pointer;
+      }
+      .button:hover {
+        background: var(--wood);
+        border-color: var(--wood);
+        transform: translateY(-2px);
+      }
+      .button.light {
+        background: transparent;
+        color: var(--brown);
+        border-color: #cbb8a5;
+      }
+      .button.light:hover {
+        background: white;
+      }
+      .menu {
+        display: none;
+        background: transparent;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 9px 12px;
+        font-size: 20px;
+      }
+      .hero {
+        background: linear-gradient(120deg, #f8f1e7, #fdfaf5 58%, #efe0cd);
+        overflow: hidden;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.02fr 0.98fr;
+        gap: 55px;
+        align-items: center;
+        padding: 66px 0 74px;
+        min-height: 610px;
+      }
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--wood);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2.1px;
+        font-weight: 900;
+      }
+      .eyebrow:before {
+        content: "";
+        height: 2px;
+        width: 25px;
+        background: var(--amber);
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+      h1 {
+        font:
+          500 clamp(45px, 5.3vw, 72px)/1.03 Georgia,
+          serif;
+        letter-spacing: -2.8px;
+        margin: 20px 0;
+      }
+      .hero h1 em {
+        font-weight: 400;
+        color: var(--wood);
+      }
+      .lead {
+        max-width: 510px;
+        font-size: 17px;
+        color: var(--muted);
+        margin-bottom: 28px;
+      }
+      .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .rating {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 28px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .stars {
+        color: #b77b28;
+        letter-spacing: 2px;
+      }
+      .rating strong {
+        color: var(--ink);
+      }
+      .hero-art {
+        position: relative;
+        padding: 0 15px 20px 0;
+      }
+      .hero-art img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 190px 190px 22px 22px;
+        box-shadow: 0 25px 65px #51351f26;
+      }
+      .hero-art:after {
+        content: "";
+        position: absolute;
+        inset: 0 15px 20px 0;
+        border: 1px solid #d3a76c;
+        border-radius: 190px 190px 22px 22px;
+        pointer-events: none;
+      }
+      .floating-card {
+        position: absolute;
+        left: -25px;
+        bottom: 0;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 17px 20px;
+        box-shadow: 0 12px 35px #3b28141c;
+        max-width: 245px;
+      }
+      .floating-card b {
+        display: block;
+        font:
+          500 21px Georgia,
+          serif;
+      }
+      .floating-card span {
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .round-tag {
+        position: absolute;
+        right: -2px;
+        top: 26px;
+        background: var(--amber);
+        color: var(--brown);
+        width: 95px;
+        height: 95px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        font-size: 10px;
+        font-weight: 900;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        transform: rotate(8deg);
+        border: 5px solid #f8f1e7;
+      }
+      .benefits {
+        background: white;
+        border-bottom: 1px solid var(--line);
+      }
+      .benefit-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 23px 0;
+      }
+      .benefit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        border-right: 1px solid var(--line);
+      }
+      .benefit:last-child {
+        border: 0;
+      }
+      .benefit .ico {
+        font-size: 24px;
+      }
+      .benefit b {
+        display: block;
+        font-size: 13px;
+      }
+      .benefit span {
+        display: block;
+        font-size: 11px;
+        color: var(--muted);
+      }
+      section {
+        padding: 88px 0;
+      }
+      .section-head {
+        max-width: 660px;
+        margin-bottom: 36px;
+      }
+      .section-head h2,
+      .about h2,
+      .contact h2 {
+        font:
+          500 clamp(35px, 4vw, 51px)/1.1 Georgia,
+          serif;
+        letter-spacing: -1.5px;
+        margin: 13px 0;
+      }
+      .section-head p {
+        color: var(--muted);
+        max-width: 610px;
+      }
+      .services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 17px;
+      }
+      .service {
+        border: 1px solid var(--line);
+        border-radius: 17px;
+        padding: 27px;
+        background: #fff;
+        transition: 0.22s;
+      }
+      .service:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 35px #3b28140d;
+        border-color: #d7b98e;
+      }
+      .service .ico {
+        width: 48px;
+        height: 48px;
+        display: grid;
+        place-items: center;
+        background: var(--cream);
+        border-radius: 14px;
+        font-size: 22px;
+        margin-bottom: 19px;
+      }
+      .service h3 {
+        font:
+          500 23px Georgia,
+          serif;
+        margin-bottom: 9px;
+      }
+      .service p {
+        font-size: 13px;
+        color: var(--muted);
+        margin: 0;
+      }
+      .about {
+        background: var(--green);
+        color: white;
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 65px;
+        align-items: center;
+      }
+      .about-photo {
+        position: relative;
+      }
+      .about-photo img {
+        width: 100%;
+        height: 435px;
+        object-fit: cover;
+        border-radius: 18px;
+      }
+      .about-photo span {
+        position: absolute;
+        left: 18px;
+        bottom: 18px;
+        background: #fff;
+        color: var(--ink);
+        padding: 12px 16px;
+        border-radius: 11px;
+        font-size: 12px;
+        font-weight: 800;
+      }
+      .about .eyebrow {
+        color: #e7bf83;
+      }
+      .about p {
+        color: #d5ddd6;
+        font-size: 14px;
+      }
+      .checks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin: 25px 0 28px;
+      }
+      .checks span {
+        font-size: 13px;
+      }
+      .checks b {
+        color: #e7bf83;
+        margin-right: 8px;
+      }
+      .gallery {
+        background: var(--cream);
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr 1fr;
+        grid-template-rows: 220px 220px;
+        gap: 14px;
+      }
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        background: #ddd;
+      }
+      .gallery-item:first-child {
+        grid-row: span 2;
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+      .gallery-item:hover img {
+        transform: scale(1.05);
+      }
+      .gallery-item:after {
+        content: "";
+        position: absolute;
+        inset: 45% 0 0;
+        background: linear-gradient(transparent, #17110dc9);
+      }
+      .gallery-item span {
+        position: absolute;
+        bottom: 15px;
+        left: 16px;
+        z-index: 1;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 800;
+      }
+      .review {
+        text-align: center;
+        background: white;
+      }
+      .review-inner {
+        max-width: 790px;
+        margin: auto;
+      }
+      .review blockquote {
+        font:
+          500 clamp(25px, 3vw, 37px)/1.3 Georgia,
+          serif;
+        margin: 20px 0;
+      }
+      .review p {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .review .button {
+        margin-top: 10px;
+      }
+      .contact {
+        background: #f8f3eb;
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 55px;
+      }
+      .contact-intro {
+        color: var(--muted);
+        max-width: 440px;
+      }
+      .contact-row {
+        display: flex;
+        gap: 13px;
+        margin: 21px 0;
+        align-items: flex-start;
+      }
+      .contact-row .ico {
+        width: 43px;
+        height: 43px;
+        border-radius: 13px;
+        background: white;
+        display: grid;
+        place-items: center;
+        font-size: 19px;
+        flex-shrink: 0;
+      }
+      .contact-row b {
+        display: block;
+        font-size: 13px;
+      }
+      .contact-row span,
+      .contact-row a {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .contact-row a:hover {
+        color: var(--wood);
+      }
+      .quote-panel {
+        padding: 30px;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        align-self: center;
+      }
+      .quote-panel h3 {
+        font:
+          500 28px Georgia,
+          serif;
+        margin-bottom: 7px;
+      }
+      .quote-panel p {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .quote-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 20px 0;
+      }
+      .map-link {
+        display: block;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px;
+        font-size: 13px;
+        font-weight: 800;
+      }
+      .map-link small {
+        display: block;
+        color: var(--muted);
+        font-weight: 400;
+        margin-top: 4px;
+      }
+      footer {
+        background: #201b16;
+        color: #f8eee2;
+        padding: 26px 0;
+      }
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        font-size: 12px;
+      }
+      .footer-row .brand small {
+        color: #cbb9a7;
+      }
+      .footer-row .brand img {
+        width: 42px;
+        height: 42px;
+      }
+      .footer-row > span {
+        color: #cbb9a7;
+      }
+      @media (max-width: 880px) {
+        .navlinks {
+          display: none;
+          position: absolute;
+          top: 78px;
+          left: 0;
+          right: 0;
+          background: var(--paper);
+          padding: 22px;
+          width: 100%;
+          border-bottom: 1px solid var(--line);
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 17px;
+        }
+        .navlinks.open {
+          display: flex;
+        }
+        .menu {
+          display: block;
+        }
+        .nav > .button {
+          display: none;
+        }
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 35px;
+          padding: 50px 0;
+        }
+        .hero-copy {
+          max-width: 680px;
+        }
+        .hero-art {
+          max-width: 600px;
+          width: 100%;
+          margin: 0 auto;
+        }
+        .hero-art img {
+          height: 420px;
+        }
+        .about-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 35px;
+        }
+        .about-photo img {
+          height: 360px;
+        }
+        .services {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .gallery-grid {
+          grid-template-rows: 200px 200px;
+        }
+        .benefit {
+          justify-content: flex-start;
+          padding: 0 12px;
+        }
+        .benefit b {
+          font-size: 12px;
+        }
+      }
+      @media (max-width: 560px) {
+        .wrap {
+          width: calc(100% - 32px);
+        }
+        .topbar .wrap {
+          justify-content: center;
+          text-align: center;
+        }
+        .topbar .wrap span:first-child {
+          display: none;
+        }
+        .nav {
+          height: 70px;
+        }
+        .navlinks {
+          top: 70px;
+        }
+        .brand img {
+          width: 44px;
+          height: 44px;
+        }
+        .brand strong {
+          font-size: 16px;
+        }
+        .brand small {
+          font-size: 9px;
+          letter-spacing: 1.4px;
+        }
+        .hero-grid {
+          padding: 40px 0 45px;
+          gap: 28px;
+        }
+        h1 {
+          font-size: 48px;
+          letter-spacing: -1.8px;
+        }
+        .lead {
+          font-size: 15px;
+        }
+        .actions {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+        .actions .button {
+          width: 100%;
+        }
+        .hero-art {
+          padding-right: 6px;
+        }
+        .hero-art img {
+          height: 330px;
+          border-radius: 150px 150px 18px 18px;
+        }
+        .hero-art:after {
+          right: 6px;
+          border-radius: 150px 150px 18px 18px;
+        }
+        .floating-card {
+          left: 0;
+          padding: 13px 15px;
+          max-width: 210px;
+        }
+        .floating-card b {
+          font-size: 18px;
+        }
+        .round-tag {
+          width: 76px;
+          height: 76px;
+          font-size: 8px;
+          right: 0;
+          top: 15px;
+          border-width: 3px;
+        }
+        .benefit-grid {
+          grid-template-columns: 1fr;
+          padding: 8px 0;
+        }
+        .benefit {
+          padding: 12px 2px;
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+        .benefit:last-child {
+          border-bottom: 0;
+        }
+        section {
+          padding: 62px 0;
+        }
+        .section-head {
+          margin-bottom: 27px;
+        }
+        .services {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+        .service {
+          padding: 23px;
+        }
+        .checks {
+          grid-template-columns: 1fr;
+        }
+        .about-photo img {
+          height: 300px;
+        }
+        .gallery-grid {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 190px 150px 150px;
+          gap: 9px;
+        }
+        .gallery-item:first-child {
+          grid-row: auto;
+          grid-column: span 2;
+        }
+        .gallery-item span {
+          left: 11px;
+          bottom: 10px;
+          font-size: 11px;
+        }
+        .quote-panel {
+          padding: 22px;
+        }
+        .quote-actions {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+        .quote-actions .button {
+          width: 100%;
+        }
+        .footer-row {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .footer-row > span {
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="wrap">
+        <span>Carpentry & woodwork in Varthur, Bengaluru</span
+        ><span
+          >Call our main number:
+          <a href="tel:+917204604892">72046 04892</a></span
+        >
+      </div>
+    </div>
+    <header>
+      <div class="wrap nav">
+        <a class="brand" href="#home"
+          ><img
+            src="assets/venkateswara-logo.jpeg"
+            alt="Venkateswara Woodcraft logo"
+          /><span
+            ><strong>Venkateswara Woodcraft</strong
+            ><small>Crafted with care</small></span
+          ></a
+        >
+        <nav class="navlinks" id="navlinks">
+          <a href="#services">Services</a><a href="#about">About</a
+          ><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a
+          ><a href="#contact">Contact</a>
+        </nav>
+        <a class="button" href="tel:+917204604892">☎ Call now</a
+        ><button
+          class="menu"
+          id="menu"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="hero" id="home">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">Local carpentry · Varthur</div>
+            <h1>Beautiful woodwork.<br /><em>Built around you.</em></h1>
+            <p class="lead">
+              From kitchen woodwork and custom carpentry to everyday repairs, we
+              help make your home more useful, comfortable and beautifully
+              finished.
+            </p>
+            <div class="actions">
+              <a class="button" href="tel:+917204604892">☎ &nbsp;72046 04892</a
+              ><a class="button light" href="#contact"
+                >Discuss your project ↗</a
+              >
+            </div>
+            <div class="rating">
+              <span class="stars">★★★★★</span
+              ><span
+                ><strong>5.0 Google rating</strong><br />Based on 2
+                reviews</span
+              >
+            </div>
+          </div>
+          <div class="hero-art">
+            <img
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+              alt="Elegant home interior with warm wood finishes"
+            />
+            <div class="floating-card">
+              <b>Craftsmanship for home</b
+              ><span>Repairs, maintenance and custom woodwork</span>
+            </div>
+            <div class="round-tag">MADE WITH<br />CARE<br />✦ VARTHUR ✦</div>
+          </div>
+        </div>
+      </section>
+      <div class="benefits">
+        <div class="wrap benefit-grid">
+          <div class="benefit">
+            <div class="ico">⌂</div>
+            <div><b>Home woodwork</b><span>Made to suit your space</span></div>
+          </div>
+          <div class="benefit">
+            <div class="ico">✧</div>
+            <div>
+              <b>Careful workmanship</b
+              ><span>Practical, thoughtful solutions</span>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="ico">📍</div>
+            <div>
+              <b>Local to Varthur</b><span>Bengaluru and nearby areas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="services">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="eyebrow">Our services</div>
+            <h2>Practical solutions.<br />Beautiful details.</h2>
+            <p>
+              Tell us what you need. We can discuss the work, timing and
+              estimate before arranging your carpentry service.
+            </p>
+          </div>
+          <div class="services">
+            <article class="service">
+              <div class="ico">🪚</div>
+              <h3>Custom carpentry</h3>
+              <p>
+                Made-to-measure woodwork planned around your space and
+                requirements.
+              </p>
+            </article>
+            <article class="service">
+              <div class="ico">🍽️</div>
+              <h3>Kitchen woodwork</h3>
+              <p>
+                Kitchen woodwork, adjustments and repairs for a more practical
+                everyday space.
+              </p>
+            </article>
+            <article class="service">
+              <div class="ico">🪑</div>
+              <h3>Furniture repairs</h3>
+              <p>
+                Repair and maintenance for household furniture and wood
+                fittings.
+              </p>
+            </article>
+            <article class="service">
+              <div class="ico">🚪</div>
+              <h3>Doors & fittings</h3>
+              <p>Help with common door, hinge, alignment and fitting issues.</p>
+            </article>
+            <article class="service">
+              <div class="ico">🛠️</div>
+              <h3>Repairs & maintenance</h3>
+              <p>Small fixes and upkeep to keep your woodwork working well.</p>
+            </article>
+            <article class="service">
+              <div class="ico">✎</div>
+              <h3>Custom requirements</h3>
+              <p>
+                Have a particular idea? Call and talk through your project with
+                us.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <div class="wrap about-grid">
+          <div class="about-photo">
+            <img
+              src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=85"
+              alt="Bright interior with carefully finished wood and furniture"
+            /><span>Venkateswara Woodcraft · Bengaluru</span>
+          </div>
+          <div>
+            <div class="eyebrow">About our work</div>
+            <h2>Good work begins with understanding your needs.</h2>
+            <p>
+              Every home is different. We believe in understanding the
+              requirement, discussing practical options and focusing on the
+              details that make woodwork useful and long-lasting.
+            </p>
+            <p>
+              From a repair to a new kitchen or custom carpentry project,
+              contact us to discuss what you have in mind.
+            </p>
+            <div class="checks">
+              <span><b>✓</b>Friendly project discussion</span
+              ><span><b>✓</b>Home repairs and maintenance</span
+              ><span><b>✓</b>Custom requirements welcome</span
+              ><span><b>✓</b>Local Varthur service</span>
+            </div>
+            <a class="button" href="tel:+917204604892">Call the main number</a>
+          </div>
+        </div>
+      </section>
+      <section class="gallery" id="gallery">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="eyebrow">Gallery & inspiration</div>
+            <h2>Ideas for your next project.</h2>
+            <p>
+              Explore a few interior and woodwork inspirations. These sample
+              photos illustrate styles and are not claimed as completed customer
+              projects.
+            </p>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+                alt="Warm contemporary living room"
+              /><span>Warm, welcoming interiors</span>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85"
+                alt="Modern kitchen interior"
+              /><span>Kitchen inspiration</span>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85"
+                alt="Modern interior details"
+              /><span>Modern finishes</span>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
+                alt="Home design inspiration"
+              /><span>Natural wood tones</span>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85"
+                alt="Tasteful home furniture"
+              /><span>Furniture and space</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="review" id="reviews">
+        <div class="wrap review-inner">
+          <div class="stars">★★★★★</div>
+          <blockquote>
+            “Trusted local carpentry, with a 5.0 Google rating.”
+          </blockquote>
+          <p>
+            Venkateswara Woodcraft's Google Business Profile currently shows a
+            5.0 rating from 2 reviews.
+          </p>
+          <a
+            class="button light"
+            href="https://www.google.com/maps/search/?api=1&query=Venkateswara%20Woodcraft%20Varthur%20Bengaluru"
+            target="_blank"
+            rel="noopener"
+            >View business on Google Maps ↗</a
+          >
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="wrap contact-grid">
+          <div>
+            <div class="eyebrow">Get in touch</div>
+            <h2>Tell us what you’d like to build or fix.</h2>
+            <p class="contact-intro">
+              Call either number to discuss your carpentry needs, service
+              availability and a quote.
+            </p>
+            <div class="contact-row">
+              <div class="ico">☎</div>
+              <div>
+                <b>Main contact number</b
+                ><a href="tel:+917204604892">72046 04892</a>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="ico">☎</div>
+              <div>
+                <b>Secondary contact number</b
+                ><a href="tel:+919677452011">96774 52011</a>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="ico">⌖</div>
+              <div>
+                <b>Business address</b
+                ><span
+                  >Site no. 15/2, Mahalaxmi Layout, Badavane,<br />Varthur,
+                  Chikkanekkundi, Bengaluru,<br />Karnataka 560087</span
+                >
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="ico">◷</div>
+              <div>
+                <b>Hours</b
+                ><span
+                  >Google Business Profile lists 24-hour availability. Please
+                  call to confirm before visiting.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="quote-panel">
+            <h3>Ready to discuss your project?</h3>
+            <p>
+              No online form or database required. Call directly or start a
+              WhatsApp conversation with a pre-filled message.
+            </p>
+            <div class="quote-actions">
+              <a class="button" href="tel:+917204604892">☎ Call 72046 04892</a
+              ><a
+                class="button light"
+                href="https://wa.me/917204604892?text=Hello%20Venkateswara%20Woodcraft%2C%20I%20would%20like%20to%20discuss%20a%20carpentry%20requirement."
+                target="_blank"
+                rel="noopener"
+                >WhatsApp ↗</a
+              >
+            </div>
+            <a
+              class="map-link"
+              href="https://www.google.com/maps/search/?api=1&query=Venkateswara%20Woodcraft%20Varthur%20Bengaluru"
+              target="_blank"
+              rel="noopener"
+              >📍 Venkateswara Woodcraft on Google Maps<small
+                >Open the business profile or get directions · Varthur,
+                Bengaluru 560087</small
+              ></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap footer-row">
+        <a class="brand" href="#home"
+          ><img src="assets/venkateswara-logo.jpeg" alt="" /><span
+            ><strong>Venkateswara Woodcraft</strong
+            ><small>Crafted with care</small></span
+          ></a
+        ><span
+          >© <span id="year"></span> Venkateswara Woodcraft · Bengaluru</span
+        ><a href="#home">Back to top ↑</a>
+      </div>
+    </footer>
+    <script>
+      const menu = document.getElementById("menu"),
+        nav = document.getElementById("navlinks");
+      menu.addEventListener("click", () => {
+        let open = nav.classList.toggle("open");
+        menu.setAttribute("aria-expanded", String(open));
+        menu.textContent = open ? "✕" : "☰";
+      });
+      nav.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => {
+          nav.classList.remove("open");
+          menu.setAttribute("aria-expanded", "false");
+          menu.textContent = "☰";
+        }),
+      );
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
